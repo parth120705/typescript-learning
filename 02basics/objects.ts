@@ -11,3 +11,5 @@ createUser(newUser);
 function createCourse():{name:string,price:number}{
     return {name:"typescript",price:500};
 }
+
+export {}
