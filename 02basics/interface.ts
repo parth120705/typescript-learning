@@ -8,12 +8,18 @@ interface User{
     startTrial():string,
     getCoupon:(couponName:string)=>number
 }
-let parth:User={_id:123,email:"p@gmail.com,",name:"parth",startTrial:()=>{
+interface User{
+    githubToken:string
+}
+interface Admin extends User{
+    role:"admin"|"ta"|"learner"
+}
+let parth:Admin={_id:123,email:"p@gmail.com,",name:"parth",startTrial:()=>{
     return "done trial"
 },
 getCoupon:(name:string)=>{
     return 10
-}}
+},role:"admin",githubToken:"tttt"}
 parth.email="pm@gmail.com"
 
 // parth._id=111;
